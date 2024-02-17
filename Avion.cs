@@ -1,20 +1,19 @@
 
-public class avion
+public class Avion
 {
-    //EV2324
-    public avion(float ALTURA, float vel, float combustible, int o)
+    public Avion(float altura, float velocidad, float combustible, int orientacion)
     {
-        this.ALTURA = ALTURA;
-        this.v = vel;
-        this.combustible = combustible;
-        this.o = o;
+        this.Altura = altura;
+        this.Velocidad = velocidad;
+        this.Combustible = combustible;
+        this.Orientacion = orientacion;
     }
 
     public float Altura
     {
         get 
         { 
-            return ALTURA; 
+            return Altura; 
         }
     }
 
@@ -22,56 +21,56 @@ public class avion
     {
         get
         {
-            return o;
+            return Orientacion;
         }
     }
     //EV2324
     public void Virar(int grados)
     {
-        o = (o + grados) % 360; 
+        Orientacion = (Orientacion + grados) % 360; 
 
-        consumir_fuel(grados * 0.1);
+        ConsumirFuel(grados * 0.1);
     }
 
     public float Combustible
     { 
         get 
         { 
-            return combustible; 
+            return Combustible; 
         } 
     }
     //Metodos que sirve para ascender los metros indicados
 
-    public void a(float M) //M son los metros
+    public void Ascender(float metros) //M son los metros
     {
-        ALTURA = ALTURA + M; 
+        Altura = Altura + metros; 
 
-        consumir_fuel(M * 0.3);
+        ConsumirFuel(metros * 0.3);
     }
     //Metodos que sirve para descender los metros indicados
 
-    public void m(float metros)
+    public void Descender(float metros)
     {
-        ALTURA = ALTURA - metros;
+        Altura = Altura - metros;
 
-        if (ALTURA < 0)
+        if (Altura < 0)
         {
-            ALTURA = 0;
+            Altura = 0;
         }
     }
 
-    private float ALTURA;
-    private float v; // Velocidad del avion
-    private float combustible; 
-    private int o;
+    private float Altura;
+    private float Velocidad; // Velocidad del avion
+    private float Combustible; 
+    private int Orientacion;
 
-    private void consumir_fuel(float litros)
+    private void ConsumirFuel(float litros)
     {
-        combustible = combustible - litros;
+        Combustible = Combustible - litros;
 
-        if (combustible < 0)
+        if (Combustible < 0)
         {
-            combustible = 0;
+            Combustible = 0;
         }
     }
 }
