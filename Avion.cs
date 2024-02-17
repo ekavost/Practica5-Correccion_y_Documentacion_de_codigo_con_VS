@@ -8,7 +8,7 @@ public class Avion
     private int orientacion;
 
     //Propiedades EV2324
-    public float altura
+    public float Altura
     {
         set
         {
@@ -16,7 +16,7 @@ public class Avion
         }
     }
 
-    public float velocidad
+    public float Velocidad
     {
         set
         {
@@ -24,14 +24,14 @@ public class Avion
         }
     }
 
-    public float combustible
+    public float Combustible
     {
         set
         {
             combustible = value;
         }
     }
-    public int orientacion
+    public int Orientacion
     {
         set
         {
