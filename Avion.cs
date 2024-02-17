@@ -1,6 +1,45 @@
 
 public class Avion
 {
+    //Campos EV2324
+    private float Altura;
+    private float Velocidad;
+    private float Combustible;
+    private int Orientacion;
+
+    //Propiedades EV2324
+    public float Altura
+    {
+        set
+        {
+            Altura = value;
+        }
+    }
+
+    public float Velocidad
+    {
+        set
+        {
+            Velocidad = value;
+        }
+    }
+
+    public float Combustible
+    {
+        set
+        {
+            Combustible = value;
+        }
+    }
+    public int Orientacion
+    {
+        set
+        {
+            Orientacion = value;
+        }
+    }
+
+    //Constructor EV2324
     public Avion(float altura, float velocidad, float combustible, int orientacion)
     {
         this.Altura = altura;
@@ -9,22 +48,7 @@ public class Avion
         this.Orientacion = orientacion;
     }
 
-    public float Altura
-    {
-        get 
-        { 
-            return Altura; 
-        }
-    }
-
-    public int Orientacion
-    {
-        get
-        {
-            return Orientacion;
-        }
-    }
-    //EV2324
+   //Métodos EV2324
     public void Virar(int grados)
     {
         Orientacion = (Orientacion + grados) % 360; 
@@ -32,22 +56,12 @@ public class Avion
         ConsumirFuel(grados * 0.1);
     }
 
-    public float Combustible
-    { 
-        get 
-        { 
-            return Combustible; 
-        } 
-    }
-    //Metodos que sirve para ascender los metros indicados
-
-    public void Ascender(float metros) //M son los metros
+    public void Ascender(float metros)
     {
         Altura = Altura + metros; 
 
         ConsumirFuel(metros * 0.3);
     }
-    //Metodos que sirve para descender los metros indicados
 
     public void Descender(float metros)
     {
@@ -58,11 +72,6 @@ public class Avion
             Altura = 0;
         }
     }
-
-    private float Altura;
-    private float Velocidad; // Velocidad del avion
-    private float Combustible; 
-    private int Orientacion;
 
     private void ConsumirFuel(float litros)
     {
