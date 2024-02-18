@@ -10,33 +10,25 @@ public class Avion
     //Propiedades EV2324
     public float Altura
     {
-        set
-        {
-            altura = value;
-        }
+        get { return altura; }
+        set { altura = value; }
     }
 
     public float Velocidad
     {
-        set
-        {
-            velocidad = value;
-        }
+        get { return velocidad; }
+        set { velocidad = value; }
     }
 
     public float Combustible
     {
-        set
-        {
-            combustible = value;
-        }
+        get { return combustible; }
+        set { combustible = value; }
     }
     public int Orientacion
     {
-        set
-        {
-            orientacion = value;
-        }
+        get { return orientacion; }
+        set { orientacion = value; }
     }
 
     //Constructor EV2324
